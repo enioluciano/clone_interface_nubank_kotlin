@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/purple"
+       >
+       <View
+           android:id="@+id/containerCirculo"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:background="@drawable/container_circle"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginTop="30dp"
+           android:layout_marginStart="20dp"
+        />
+
+       <ImageView
+           app:layout_constraintTop_toTopOf="@+id/containerCirculo"
+           app:layout_constraintBottom_toBottomOf="@+id/containerCirculo"
+           app:layout_constraintStart_toStartOf="@+id/containerCirculo"
+           app:layout_constraintEnd_toEndOf="@+id/containerCirculo"
+           android:src="@drawable/ic_usuario"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/txt_nome_usuario"
+           android:textColor="@color/white"
+           android:textSize="18sp"
+           android:textStyle="bold"
+           app:layout_constraintTop_toBottomOf="@+id/containerCirculo"
+           app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginStart="20dp"
+           android:layout_marginTop="30dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           android:layout_marginBottom="30dp"
+           />
+
+        <ImageView
+            android:id="@+id/icEye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toEndOf="@+id/containerCirculo"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+       <ImageView
+           android:id="@+id/icQuestion"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_question"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="40dp"
+           app:layout_constraintStart_toEndOf="@+id/icEye"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintEnd_toStartOf="@+id/icPersonAdd"
+           />
+
+       <ImageView
+           android:id="@+id/icPersonAdd"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_person_add"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="40dp"
+           android:layout_marginEnd="20dp"
+           app:layout_constraintStart_toEndOf="@+id/icQuestion"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_saldo_conta"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:layout_margin="20dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerIconesPagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="20dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/light_gray"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_credit"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_cartoes"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_gray"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="@string/txt_cartao_de_credito"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/txt_fatura_atual"
+        android:textColor="@color/dark_gray"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="@string/txt_dinheiro_fatura"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/txt_limite_disponivel"
+        android:textColor="@color/dark_gray"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="@string/txt_parcelar_compras"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        />
+
+
+
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
